@@ -1,35 +1,32 @@
 require "nvchad.mappings"
 
 local map = vim.keymap.set
--- add yours here
 
-map("n", ";", ":", { desc = "CMD enter command mode" })
-map("i", "jk", "<ESC>")
+map("n", ";", ":", { desc = "CMD mode" })
+map("i", "jk", "<Esc>", { noremap = true, silent = true })
 
-map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
+map({ "n", "i", "v" }, "<C-s>", "<cmd>w<CR>")
 
-map("n", "<leader>cc", ":CopyDiagnostic<CR>", { desc = "Copy diagnostic at current line" })
+map("n", "<leader>cc", ":CopyDiagnostic<CR>", { desc = "Copy diagnostic" })
+
 map("n", "<Esc>", ":nohlsearch<CR>")
 map("n", "q", ":nohlsearch<CR>")
+map("v", "q", "<Esc>")
 
-map("n", "J", "5jzz", { noremap = true, silent = true })
-map("n", "K", "5kzz", { noremap = true, silent = true })
-map("i", "jk", "<Esc>", { noremap = true, silent = true })
-map("v", "q", "<Esc>", { noremap = true, silent = true })
+map("n", "J", "5jzz", { silent = true })
+map("n", "K", "5kzz", { silent = true })
 
-map("n", "<C-h>", "<C-w>h", { noremap = true, silent = true })
-map("n", "<C-j>", "<C-w>j", { noremap = true, silent = true })
-map("n", "<C-k>", "<C-w>k", { noremap = true, silent = true })
-map("n", "<C-l>", "<C-w>l", { noremap = true, silent = true })
+map("n", "<C-h>", "<C-w>h", { silent = true })
+map("n", "<C-j>", "<C-w>j", { silent = true })
+map("n", "<C-k>", "<C-w>k", { silent = true })
+map("n", "<C-l>", "<C-w>l", { silent = true })
 
-map("n", "<Leader>vs", ":vsplit<CR>", { noremap = true, silent = true })
-map("n", "<Leader>hs", ":split<CR>", { noremap = true, silent = true })
+map("n", "<Leader>vs", ":vsplit<CR>", { silent = true })
+map("n", "<Leader>hs", ":split<CR>", { silent = true })
 
-map("n", "<D-a>", "GVgg", { noremap = true, silent = true })
-map("n", "gh", "G", { noremap = true, silent = true })
+map("n", "<D-a>", "ggVG", { silent = true })
 
-map("n", "vv", "V", { noremap = true, silent = true })
+map("n", "gh", "G", { silent = true })
+map("n", "vv", "V", { silent = true })
 
 map("t", "<Esc>", [[<C-\><C-n>]])
-
-
