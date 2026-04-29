@@ -25,8 +25,16 @@ map("n", "<Leader>vs", ":vsplit<CR>", { silent = true })
 map("n", "<Leader>hs", ":split<CR>", { silent = true })
 
 map("n", "<D-a>", "ggVG", { silent = true })
+map("n", "<D-s>", ":wa<CR>", { silent = true })
 
 map("n", "gh", "G", { silent = true })
 map("n", "vv", "V", { silent = true })
 
 map("t", "<Esc>", [[<C-\><C-n>]])
+map("n", "<leader>=", "<C-w>=", { desc = "equalize splits" })
+
+map("n", "<A-h>", ":vertical resize -2<CR>", { silent = true })
+map("n", "<A-l>", ":vertical resize +2<CR>", { silent = true })
+map("n", "<A-j>", ":resize -2<CR>", { silent = true })
+map("n", "<A-k>", ":resize +2<CR>", { silent = true })
+
